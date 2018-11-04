@@ -123,7 +123,7 @@ exports.getScraping = (req, res, next) => {
 exports.getGithub = async (req, res, next) => {
   const github = new GitHub();
   try {
-    const { data: repo } = await github.repos.get({ owner: 'sahat', repo: 'hackathon-starter' });
+    const { data: repo } = await github.repos.get({ owner: 'mosh-media', repo: 'ProMania-back-end' });
     res.render('api/github', {
       title: 'GitHub API',
       repo
@@ -451,8 +451,8 @@ exports.getClockwork = (req, res) => {
 exports.postClockwork = (req, res, next) => {
   const message = {
     To: req.body.telephone,
-    From: 'Hackathon',
-    Content: 'Hello from the Hackathon Starter'
+    From: 'ProMania',
+    Content: 'Hello from the ProMania'
   };
   clockwork.sendSms(message, (err, responseData) => {
     if (err) { return next(err.errDesc); }
@@ -524,7 +524,7 @@ exports.getPayPal = (req, res, next) => {
       cancel_url: process.env.PAYPAL_CANCEL_URL
     },
     transactions: [{
-      description: 'Hackathon Starter',
+      description: 'ProMania',
       amount: {
         currency: 'USD',
         total: '1.99'

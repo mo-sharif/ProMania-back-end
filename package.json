@@ -4,9 +4,9 @@
   "description": "A boilerplate for Node.js web applications",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sahat/hackathon-starter.git"
+    "url": "https://github.com/Mosh-Media/ProMania-back-end"
   },
-  "author": "Sahat Yalkabov",
+  "author": "Mo Sharif",
   "license": "MIT",
   "scripts": {
     "postinstall": "npm rebuild node-sass",
